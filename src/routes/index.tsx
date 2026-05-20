@@ -227,7 +227,7 @@ function HomePage() {
               { v: "5000+", l: "Happy Travelers" },
               { v: "150+", l: "Destinations" },
               { v: "250+", l: "Tour Packages" },
-              { v: "10+", l: "Years Experience" },
+              { v: "1+", l: "Years Experience" },
             ].map((s) => (
               <div key={s.l} className="flex flex-col items-center text-center sm:px-4">
                 <div className="font-display text-3xl font-extrabold text-accent sm:text-4xl">{s.v}</div>
