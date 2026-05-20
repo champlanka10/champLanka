@@ -15,6 +15,7 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -54,7 +55,7 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[92vh] overflow-visible">
+      <section className="relative min-h-[92vh] overflow-hidden">
         <img
           src={heroImg}
           alt="Sri Lanka coastline at golden hour"
@@ -226,7 +227,7 @@ function HomePage() {
               { v: "5000+", l: "Happy Travelers" },
               { v: "150+", l: "Destinations" },
               { v: "250+", l: "Tour Packages" },
-              { v: "1+", l: "Years Experience" },
+              { v: "10+", l: "Years Experience" },
             ].map((s) => (
               <div key={s.l} className="flex flex-col items-center text-center sm:px-4">
                 <div className="font-display text-3xl font-extrabold text-accent sm:text-4xl">{s.v}</div>
