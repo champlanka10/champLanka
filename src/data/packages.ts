@@ -5,7 +5,7 @@ import surf from "@/assets/pkg-surf.jpg";
 import cultural from "@/assets/pkg-cultural.jpg";
 import adventure from "@/assets/pkg-adventure.jpg";
 
-export type PackageCategory = "Best Seller" | "Popular" | "Cultural" | "Wildlife" | "Luxury" | "Adventure";
+export type PackageCategory = "Heritage" | "Popular" | "Nature" | "Wildlife" | "Luxury" | "Adventure";
 
 export interface TourPackage {
   id: string;
@@ -26,7 +26,7 @@ export const packages: TourPackage[] = [
   {
     id: "classic-cultural-triangle",
     name: "Classic Cultural Triangle",
-    category: "Best Seller",
+    category: "Heritage",
     days: 6,
     nights: 5,
     priceFrom: 320,
@@ -69,7 +69,7 @@ export const packages: TourPackage[] = [
   {
     id: "tea-country-train-journey",
     name: "Tea Country Train Journey",
-    category: "Cultural",
+    category: "Nature",
     days: 4,
     nights: 3,
     priceFrom: 250,

@@ -21,9 +21,9 @@ export const Route = createFileRoute("/")({
 });
 
 const categoryColors: Record<string, string> = {
-  "Best Seller": "bg-primary text-primary-foreground",
+  "Heritage": "bg-primary text-primary-foreground",
   Popular: "bg-accent text-accent-foreground",
-  Cultural: "bg-orange-500 text-white",
+  Nature: "bg-orange-500 text-white",
   Wildlife: "bg-purple-600 text-white",
   Luxury: "bg-pink-500 text-white",
   Adventure: "bg-emerald-600 text-white",
@@ -63,7 +63,7 @@ function HomePage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="relative z-10 container mx-auto flex min-h-[92vh] flex-col justify-center px-4 pb-32 pt-32 sm:px-6 lg:pt-40">
+        <div className="relative z-10 container mx-auto flex min-h-[92vh] flex-col justify-center px-4 pb-28 pt-32 sm:px-6 lg:pt-40">
           <div className="max-w-3xl text-primary-foreground">
             <p className="font-script text-3xl text-accent sm:text-4xl">Welcome to Paradise</p>
             <h1 className="mt-3 font-display text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
@@ -99,7 +99,7 @@ function HomePage() {
         </div>
 
         {/* Floating services strip */}
-        <div className="absolute inset-x-0 -bottom-8 z-20 px-4 sm:px-6">
+        <div className="absolute inset-x-0 -bottom-16 z-20 px-4 sm:px-6 lg:-bottom-6">
           <div className="container mx-auto">
             <div className="grid grid-cols-2 gap-3 rounded-2xl bg-card p-4 shadow-elegant sm:grid-cols-3 sm:gap-4 sm:p-5 lg:grid-cols-5">
               {services.slice(0, 5).map((s) => (
@@ -240,7 +240,7 @@ function HomePage() {
       {/* GALLERY teaser */}
       <section className="bg-background py-20">
         <div className="container mx-auto px-4 sm:px-6">
-          <SectionTitle align="center" eyebrow="Moments" title="A Glimpse of the Journey" subtitle="Snapshots from real Champ Lanka travellers — from misty highlands to wild coastlines." />
+          <SectionTitle eyebrow="Moments" title="A Glimpse of the Journey" subtitle="Snapshots from real Champ Lanka travellers — from misty highlands to wild coastlines." />
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {galleryImages.map((img, i) => (
               <Link
