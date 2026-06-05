@@ -12,7 +12,7 @@ export function Logo({ variant = "default", className = "" }: LogoProps) {
       <img
         src={websiteLogo}
         alt="Champ Lanka logo"
-        className="h-35 w-auto max-w-[400px] object-contain"
+        className="h-38 w-auto max-w-[400px] object-contain -bottom-2 relative lg:-bottom-2"
       />
     </Link>
   );

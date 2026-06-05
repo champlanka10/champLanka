@@ -26,7 +26,7 @@ function AboutPage() {
         <div className="container mx-auto px-4 text-center text-primary-foreground sm:px-6">
           <p className="font-script text-2xl text-accent">Our Story</p>
           <h1 className="mt-2 font-display text-4xl font-extrabold sm:text-6xl">About Champ Lanka</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">A small, passionate team of Sri Lankan travel designers — building unforgettable island journeys since 2014.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">A small, passionate team of Sri Lankan travel designers — building unforgettable island journeys since 2026.</p>
         </div>
       </section>
 

@@ -50,7 +50,7 @@ export function Footer() {
     <footer
       className="relative isolate text-primary-foreground"
       style={{
-        backgroundImage: `linear-gradient(180deg, oklch(0.18 0.05 255 / 0.96), oklch(0.14 0.04 255 / 0.99)), url(${footerBg})`,
+        backgroundImage: `linear-gradient(180deg, oklch(0.18 0.05 255 / 0.35), oklch(0.14 0.04 255 / 0.5)), url(${footerBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -147,12 +147,15 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-primary-foreground/60 sm:flex-row sm:px-6">
-          <p>© {new Date().getFullYear()} Champ Lanka (Pvt) Ltd. All rights reserved.</p>
-          <div className="flex items-center gap-5">
-            <Link to="/contact" className="transition-smooth hover:text-accent">Privacy Policy</Link>
-            <Link to="/contact" className="transition-smooth hover:text-accent">Terms &amp; Conditions</Link>
+        <div className="container mx-auto grid gap-3 px-4 py-5 text-xs text-primary-foreground/60 sm:grid-cols-[auto_1fr_auto] sm:items-center sm:px-6">
+          <div className="order-2 flex justify-center sm:order-1 sm:justify-start">
+            <div className="flex items-center gap-1">
+              <Link to="/contact" className="transition-smooth hover:text-accent">Privacy Policy |</Link>
+              <Link to="/contact" className="transition-smooth hover:text-accent">Terms & Conditions</Link>
+            </div>
           </div>
+          <p className="order-1 text-center sm:order-2">© {new Date().getFullYear()} Champ Lanka (Pvt) Ltd. All rights reserved.</p>
+          <div className="order-3 hidden sm:block" />
         </div>
       </div>
     </footer>

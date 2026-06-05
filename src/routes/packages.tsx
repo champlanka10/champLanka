@@ -10,9 +10,9 @@ export const Route = createFileRoute("/packages")({
 });
 
 const categoryColors: Record<string, string> = {
-  "Best Seller": "bg-primary text-primary-foreground",
+  Heritage: "bg-primary text-primary-foreground",
   Popular: "bg-accent text-accent-foreground",
-  Cultural: "bg-orange-500 text-white",
+  Nature: "bg-orange-500 text-white",
   Wildlife: "bg-purple-600 text-white",
   Luxury: "bg-pink-500 text-white",
   Adventure: "bg-emerald-600 text-white",
