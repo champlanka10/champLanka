@@ -1,0 +1,96 @@
+/* =============================================
+   True 3D Ring Carousel
+   All images arranged in a circle in 3D space.
+   The ring spins continuously.
+   ============================================= */
+
+/* --carousel-radius controls how far images sit from the centre.
+   We scale it with the viewport so it looks right everywhere. */
+:root {
+  --carousel-radius: 200px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --carousel-radius: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --carousel-radius: 320px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --carousel-radius: 380px;
+  }
+}
+
+/* ── Scene: sets perspective ────────────────── */
+.carousel-scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+/* ── Ring: the rotating wrapper ─────────────── */
+.carousel-ring {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: spin3d 18s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .carousel-ring {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-ring {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .carousel-ring {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* ── Each card ──────────────────────────────── */
+.carousel-card {
+  position: absolute;
+  inset: 0;
+  /* keep the card facing forward even as the ring rotates */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* image inside card */
+.carousel-card img {
+  object-fit: contain !important;
+  border-radius: 16px;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+}
+
+/* ── Keyframe ───────────────────────────────── */
+@keyframes spin3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
